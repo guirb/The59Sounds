@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		721876E51B87684700581701 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721876E41B87684700581701 /* MusicTableViewCell.swift */; };
 		72CCC31A1B875F4F00A359C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC3191B875F4F00A359C8 /* AppDelegate.swift */; };
 		72CCC31D1B875F4F00A359C8 /* The59Sounds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC31B1B875F4F00A359C8 /* The59Sounds.xcdatamodeld */; };
-		72CCC31F1B875F4F00A359C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC31E1B875F4F00A359C8 /* ViewController.swift */; };
 		72CCC3221B875F4F00A359C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CCC3201B875F4F00A359C8 /* Main.storyboard */; };
 		72CCC3241B875F4F00A359C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72CCC3231B875F4F00A359C8 /* Images.xcassets */; };
 		72CCC3271B875F4F00A359C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72CCC3251B875F4F00A359C8 /* LaunchScreen.xib */; };
 		72CCC3331B875F4F00A359C8 /* The59SoundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC3321B875F4F00A359C8 /* The59SoundsTests.swift */; };
+		72CCC33D1B87603200A359C8 /* MusicListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC33C1B87603200A359C8 /* MusicListTableViewController.swift */; };
+		72CCC33F1B87628300A359C8 /* NewMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC33E1B87628300A359C8 /* NewMusicViewController.swift */; };
+		72CCC3411B87632800A359C8 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC3401B87632800A359C8 /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +30,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		721876E41B87684700581701 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		72CCC3141B875F4F00A359C8 /* The59Sounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = The59Sounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CCC3181B875F4F00A359C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72CCC3191B875F4F00A359C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72CCC31C1B875F4F00A359C8 /* The59Sounds.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = The59Sounds.xcdatamodel; sourceTree = "<group>"; };
-		72CCC31E1B875F4F00A359C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72CCC3211B875F4F00A359C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72CCC3231B875F4F00A359C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		72CCC3261B875F4F00A359C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		72CCC32C1B875F4F00A359C8 /* The59SoundsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = The59SoundsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CCC3311B875F4F00A359C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72CCC3321B875F4F00A359C8 /* The59SoundsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The59SoundsTests.swift; sourceTree = "<group>"; };
+		72CCC33C1B87603200A359C8 /* MusicListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListTableViewController.swift; sourceTree = "<group>"; };
+		72CCC33E1B87628300A359C8 /* NewMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMusicViewController.swift; sourceTree = "<group>"; };
+		72CCC3401B87632800A359C8 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +86,15 @@
 			isa = PBXGroup;
 			children = (
 				72CCC3191B875F4F00A359C8 /* AppDelegate.swift */,
-				72CCC31E1B875F4F00A359C8 /* ViewController.swift */,
+				72CCC3401B87632800A359C8 /* Music.swift */,
 				72CCC3201B875F4F00A359C8 /* Main.storyboard */,
+				72CCC33C1B87603200A359C8 /* MusicListTableViewController.swift */,
 				72CCC3231B875F4F00A359C8 /* Images.xcassets */,
 				72CCC3251B875F4F00A359C8 /* LaunchScreen.xib */,
 				72CCC31B1B875F4F00A359C8 /* The59Sounds.xcdatamodeld */,
 				72CCC3171B875F4F00A359C8 /* Supporting Files */,
+				72CCC33E1B87628300A359C8 /* NewMusicViewController.swift */,
+				721876E41B87684700581701 /* MusicTableViewCell.swift */,
 			);
 			path = The59Sounds;
 			sourceTree = "<group>";
@@ -215,9 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72CCC31F1B875F4F00A359C8 /* ViewController.swift in Sources */,
 				72CCC31A1B875F4F00A359C8 /* AppDelegate.swift in Sources */,
 				72CCC31D1B875F4F00A359C8 /* The59Sounds.xcdatamodeld in Sources */,
+				72CCC33F1B87628300A359C8 /* NewMusicViewController.swift in Sources */,
+				72CCC33D1B87603200A359C8 /* MusicListTableViewController.swift in Sources */,
+				72CCC3411B87632800A359C8 /* Music.swift in Sources */,
+				721876E51B87684700581701 /* MusicTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +425,7 @@
 				72CCC3381B875F4F00A359C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72CCC3391B875F4F00A359C8 /* Build configuration list for PBXNativeTarget "The59SoundsTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				72CCC33B1B875F4F00A359C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
