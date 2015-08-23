@@ -28,12 +28,9 @@ class NewMusicViewController: UIViewController {
         
         music.set(musicName: musicName.text, bandName: bandName.text)
         
-        
     }
     
     @IBAction func doneAction(sender: AnyObject) {
-        //self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
-        //self.presentedViewController!.dismissViewControllerAnimated(true, completion: nil)
         
         navigationController?.popViewControllerAnimated(true)
         self.dismissViewControllerAnimated(true, completion: nil)

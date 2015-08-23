@@ -1,33 +1,31 @@
 //
 //  Music.swift
-//  Playlist
+//  The59Sounds
 //
-//  Created by gustavo.freitas2 on 8/20/15.
+//  Created by gustavo.freitas2 on 8/23/15.
 //  Copyright (c) 2015 himynameisgustavo. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
+class Music: NSManagedObject {
 
-class Music {
-    
-    
-    private var musicName: String?
-    private var bandName: String?
-    
+    @NSManaged var musicName: String?
+    @NSManaged var bandName: String?
+
     
     func getMusicName() -> String {
-        
-        if let music = musicName {
+        if let music = self.musicName {
             return music
         } else {
             return " "
         }
+
     }
     
     func getBandName() -> String {
-        
-        if let band = bandName {
+        if let band = self.bandName {
             return band
         } else {
             return " "

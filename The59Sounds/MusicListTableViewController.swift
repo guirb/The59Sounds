@@ -7,31 +7,72 @@
 //
 
 import UIKit
+import CoreData
 
 class MusicListTableViewController: UITableViewController, UITableViewDataSource {
     
     private var musics: Array<Music> = Array<Music>()
     
+    var context: NSManagedObjectContext!
+    var model: NSManagedObjectModel!
+    
+    let itemArchivePath: String = {
+        let documentsDirectories = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentDirectory = documentsDirectories.first as! String
+        
+        return documentDirectory.stringByAppendingPathComponent("store.data")
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let model = NSManagedObjectModel.mergedModelFromBundles(nil) {
+            self.model = model
+            
+            let psc = NSPersistentStoreCoordinator(managedObjectModel: model)
+            
+            if let storeURL = NSURL(fileURLWithPath: itemArchivePath) {
+                var error: NSError?
+                
+                psc.addPersistentStoreWithType(NSSQLiteStoreType,
+                    configuration: nil,
+                    URL: storeURL,
+                    options: nil,
+                    error: &error)
+                
+                context = NSManagedObjectContext()
+                context.persistentStoreCoordinator = psc
+                
+                self.loadMusics()
+                
+            }
+        }
                 
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if musics.last?.getMusicName() == "" {
+        if musics.last?.getMusicName() == " " {
             musics.removeLast()
         }
         
         tableView.reloadData()
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        var error: NSError?
+        if !context.save(&error) {
+            println("Error")
+        } 
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "newMusic" {
-            var newMusic = Music()
+            var newMusic = NSEntityDescription.insertNewObjectForEntityForName("Music", inManagedObjectContext: context) as! Music
             
             musics.append(newMusic)
             tableView.reloadData()
@@ -61,6 +102,22 @@ class MusicListTableViewController: UITableViewController, UITableViewDataSource
         cell.bandNameLabel.text = music.getBandName()
         
         return cell
+        
+    }
+    
+    func loadMusics(){
+        
+        let request = NSFetchRequest()
+        
+        let e = NSEntityDescription.entityForName("Music", inManagedObjectContext: context)
+        request.entity = e
+        
+        var error: NSError?
+        if let result = context.executeFetchRequest(request, error: &error) as? [Music]{
+            musics = musics + result
+        }else{
+            println("Fecth failed: \(error!.localizedDescription)")
+        }
         
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		721876E51B87684700581701 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721876E41B87684700581701 /* MusicTableViewCell.swift */; };
+		7243AD211B8A4F3A0095BF5B /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7243AD201B8A4F3A0095BF5B /* Music.swift */; };
 		72CCC31A1B875F4F00A359C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC3191B875F4F00A359C8 /* AppDelegate.swift */; };
 		72CCC31D1B875F4F00A359C8 /* The59Sounds.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC31B1B875F4F00A359C8 /* The59Sounds.xcdatamodeld */; };
 		72CCC3221B875F4F00A359C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72CCC3201B875F4F00A359C8 /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		72CCC3331B875F4F00A359C8 /* The59SoundsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC3321B875F4F00A359C8 /* The59SoundsTests.swift */; };
 		72CCC33D1B87603200A359C8 /* MusicListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC33C1B87603200A359C8 /* MusicListTableViewController.swift */; };
 		72CCC33F1B87628300A359C8 /* NewMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC33E1B87628300A359C8 /* NewMusicViewController.swift */; };
-		72CCC3411B87632800A359C8 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CCC3401B87632800A359C8 /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		721876E41B87684700581701 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		7243AD201B8A4F3A0095BF5B /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		72CCC3141B875F4F00A359C8 /* The59Sounds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = The59Sounds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CCC3181B875F4F00A359C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72CCC3191B875F4F00A359C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		72CCC3321B875F4F00A359C8 /* The59SoundsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The59SoundsTests.swift; sourceTree = "<group>"; };
 		72CCC33C1B87603200A359C8 /* MusicListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListTableViewController.swift; sourceTree = "<group>"; };
 		72CCC33E1B87628300A359C8 /* NewMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMusicViewController.swift; sourceTree = "<group>"; };
-		72CCC3401B87632800A359C8 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +85,8 @@
 		72CCC3161B875F4F00A359C8 /* The59Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				7243AD201B8A4F3A0095BF5B /* Music.swift */,
 				72CCC3191B875F4F00A359C8 /* AppDelegate.swift */,
-				72CCC3401B87632800A359C8 /* Music.swift */,
 				72CCC3201B875F4F00A359C8 /* Main.storyboard */,
 				72CCC33C1B87603200A359C8 /* MusicListTableViewController.swift */,
 				72CCC3231B875F4F00A359C8 /* Images.xcassets */,
@@ -228,8 +228,8 @@
 				72CCC31D1B875F4F00A359C8 /* The59Sounds.xcdatamodeld in Sources */,
 				72CCC33F1B87628300A359C8 /* NewMusicViewController.swift in Sources */,
 				72CCC33D1B87603200A359C8 /* MusicListTableViewController.swift in Sources */,
-				72CCC3411B87632800A359C8 /* Music.swift in Sources */,
 				721876E51B87684700581701 /* MusicTableViewCell.swift in Sources */,
+				7243AD211B8A4F3A0095BF5B /* Music.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
