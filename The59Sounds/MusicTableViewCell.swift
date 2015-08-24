@@ -15,4 +15,8 @@ class MusicTableViewCell: UITableViewCell {
     @IBOutlet weak var bandNameLabel: UILabel!
     
     
+    
+    
+    
+    
 }

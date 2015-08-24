@@ -21,6 +21,9 @@ class NewMusicViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        musicName.text = music.getMusicName()
+        bandName.text = music.getBandName()
+        
     }
     
     override func viewWillDisappear(animated: Bool) {

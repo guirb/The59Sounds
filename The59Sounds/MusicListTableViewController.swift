@@ -9,12 +9,13 @@
 import UIKit
 import CoreData
 
-class MusicListTableViewController: UITableViewController, UITableViewDataSource {
+class MusicListTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     private var musics: Array<Music> = Array<Music>()
     
     var context: NSManagedObjectContext!
     var model: NSManagedObjectModel!
+    var isUpdate: Bool = false
     
     let itemArchivePath: String = {
         let documentsDirectories = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
@@ -53,8 +54,10 @@ class MusicListTableViewController: UITableViewController, UITableViewDataSource
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if musics.last?.getMusicName() == " " {
-            musics.removeLast()
+        if(!isUpdate) {
+            if musics.last?.getMusicName() == " " {
+                musics.removeLast()
+            }
         }
         
         tableView.reloadData()
@@ -72,6 +75,7 @@ class MusicListTableViewController: UITableViewController, UITableViewDataSource
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "newMusic" {
+            isUpdate = false
             var newMusic = NSEntityDescription.insertNewObjectForEntityForName("Music", inManagedObjectContext: context) as! Music
             
             musics.append(newMusic)
@@ -82,6 +86,15 @@ class MusicListTableViewController: UITableViewController, UITableViewDataSource
                 nc.prepare(music: newMusic)
                 
             }
+        } else if segue.identifier == "updateMusic" {
+            isUpdate = true
+            var music = musics[tableView.indexPathForSelectedRow()!.row]
+            
+            if let nc = segue.destinationViewController as? NewMusicViewController {
+                
+                nc.prepare(music: music)
+            }
+            
         }
     }
     
@@ -100,6 +113,8 @@ class MusicListTableViewController: UITableViewController, UITableViewDataSource
         cell.numberNameLabel.text = String(indexPath.row + 1)
         cell.musicNameLabel.text = "\""+music.getMusicName()+"\""
         cell.bandNameLabel.text = music.getBandName()
+        
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
         
@@ -120,6 +135,7 @@ class MusicListTableViewController: UITableViewController, UITableViewDataSource
         }
         
     }
+
     
 
 }

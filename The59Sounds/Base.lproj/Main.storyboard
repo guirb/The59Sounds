@@ -68,10 +68,12 @@
                                         <constraint firstItem="Pr9-t0-cmO" firstAttribute="leading" secondItem="Hfw-cQ-zBz" secondAttribute="trailing" constant="5" id="ubz-jU-isD"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="bandNameLabel" destination="2C8-Ok-JQg" id="c7p-g4-Wpe"/>
                                     <outlet property="musicNameLabel" destination="Pr9-t0-cmO" id="ZsH-92-1D6"/>
                                     <outlet property="numberNameLabel" destination="Hfw-cQ-zBz" id="F10-lC-bY4"/>
+                                    <segue destination="mKc-5Z-a6W" kind="show" identifier="updateMusic" id="Sls-iE-kHY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -180,4 +182,7 @@
             <point key="canvasLocation" x="451" y="590"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Sls-iE-kHY"/>
+    </inferredMetricsTieBreakers>
 </document>
